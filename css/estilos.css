@@ -1,3 +1,317 @@
-h1{
-    color: red;
-}
+/* RESET Y BASE */
+/* Quita margenes y paddings predeterminados de todos los elementos, y hace que el ancho incluya el padding y borde. Mejora navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Define fuente y colores base del cuerpo del sitio */
+  body {
+    font-family: 'Segoe UI', sans-serif;/* Fuente moderna y legible */
+    background-color: #fcfcfc;/* Fondo claro */
+    color: #94978d;/* Color de texto suave */
+  }
+  
+  /* HEADER */
+  header {/* Estilo del encabezado */
+    background-color: #26459b;
+    color: white;/* Texto en blanco */
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  
+  /* NAVIGATION DENTRO DEL HEADER */
+  header ul {/* lista horizontal de navegación */
+    list-style: none;/* quita los puntos de lista */
+    display: flex;/* muestra elementos en fila */
+    justify-content: center;/* centra la navegación */
+    gap: 20px; /* espacio entre los enlaces */
+    flex-wrap: wrap;/* hace que los ítems bajen si no entran */
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;/* Negrita */
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;/* animación cuando pasas el mouse */
+  }
+  
+  
+  header ul li a:hover {
+    background-color: #9d55be;/* fondo morado al pasar el mouse */
+    color: #fff;
+    border-radius: 5px;/* bordes redondeados */
+  }
+  
+  /* MAIN */
+  main {
+    padding: 30px 10%;/* margen interno con porcentaje horizontal */
+  }
+  
+  section {
+    margin-bottom: 40px;/* espacio entre secciones */
+  }
+  
+  section h3 {/* títulos de las secciones */
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  section p {/* parrafos dentro de las secciones */
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6; /* espaciado entre líneas */
+  }
+  
+  /* ESTILO TARJETAS DEL CATALOGO */
+  section ol {/* lista ordenada que contiene tarjetas (li) */
+    display: flex;
+    flex-direction: column;/* muestra los items uno debajo del otro */
+    gap: 20px;
+    padding: 0;
+  }
+  /* Cada tarjeta del catálogo */
+  section ol li {/* MODIFICA LA DESCRIPCION EN LA IMAGEN */
+    display: flex;/* imagen y contenido en fila */
+    flex-wrap: nowrap;
+    align-items: flex-start;/* alinea arriba */
+    gap: 20px;
+    background-color: #f4f7f8;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);/* sombra suave */
+    padding: 16px;
+    transition: transform 0.3s ease;/* aimación al hacer hover */
+  }
+  
+  section ol li:hover {
+    transform: translateY(-5px);/* efecto de levantar la tarjeta al pasar el mouse */
+    /*transform: scale(1.01);*/
+    /*box-shadow: 0 6px 16px rgba(0,0,0,0.15);*/
+  }
+  
+  section ol li img {/* imagen dentro de la tarjeta */
+    width: 300px;
+    height: auto;
+    object-fit: cover;/* ajusta la imagen sin deformarla */
+    flex-shrink: 0;
+  }
+  /* contenedor del texto dentro de la tarjeta */
+  section ol li div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* titulo del salón */
+  section ol li strong {
+    display: block;
+    font-size: 1.2em;
+    color: #2c3e50;
+  }
+  
+  section ol li p {/* descripción del salón */
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #444;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {/* adaptación para pantallas pequeñas (celulares) "NO SE SI VA"*/ 
+    section ol li {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    section ol li img {
+      width: 100%;/*imagen que ocupa todo el ancho*/
+    }
+  
+    section ol li div {
+      padding: 15px;
+      text-align: center;
+    }
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #26459b;
+    color: white;
+    padding: 30px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* espacio entre las dos secciones del footer */
+  }
+  
+  footer section {/* cada sección del footer (info / formulario / enlaces) */
+    width: 45%;
+    margin-bottom: 10px;
+  }
+  
+  /* campos del formulario */
+  footer form {
+    display: flex;
+    align-items: center; 
+    justify-content: start; 
+    gap: 10px; 
+  }
+  
+  footer form input {
+    flex: 1; 
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  footer form button {
+    padding: 8px 12px; 
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  /* lista de enlaces en el footer */
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+  /* texto centrado final */
+  footer p {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  /* secciones finales */
+  footer span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  footer span a {
+    color: #1abc9c;
+    text-decoration: none;
+  }
+  
+  footer span a:hover {
+    text-decoration: underline;
+  }
+  
+  /* BLOG */
+  
+  .entrada-blog {
+    display: flex; 
+    flex-wrap: nowrap;
+    align-items: flex-start; 
+    gap: 20px; 
+    background-color: #f4f7f8; 
+    border: 1px solid #8ccbe6; 
+    border-radius: 12px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    padding: 16px; 
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .entrada-blog:hover {
+    transform: translateY(-5px); 
+  }
+  
+  .entrada-blog img {
+    width: 250px; 
+    height: auto; 
+    border-radius: 8px; 
+    margin-right: 15px; 
+  }
+  
+  
+  /*contacto*/
+  .contacto {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  
+  button {
+    background: #008CBA;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  
+  /*institucional*/
+  .institucional, .mision-vision, .servicios {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .institucional h3, 
+  .mision-vision h3, 
+  .servicios h3 {
+      margin-bottom: 20px; 
+      text-indent: 0; 
+  }
+  .mision-vision h3 {
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+  }
+  
+  .mision-vision p {
+    margin-bottom: 15px; 
+  }
+  .institucional p, 
+  .mision-vision p, 
+  .servicios ul {
+      text-indent: 20px;
+      margin-top: 10px; 
+  }
+  .servicios ul {
+    list-style-position: inside; 
+    padding-left: 0; 
+  }
+  
+  .servicios li {
+    margin-bottom: 10px;
+  }

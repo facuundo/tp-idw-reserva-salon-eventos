@@ -7,6 +7,7 @@
 }
 /* Define fuente y colores base del cuerpo del sitio */
 body {
+  min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;/* Fuente moderna y legible */
   background-color: #fcfcfc;/* Fondo claro */
   color: #94978d;/* Color de texto suave */

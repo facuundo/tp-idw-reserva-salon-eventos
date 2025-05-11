@@ -37,25 +37,6 @@ header section{
 }
 
 /* MAIN */
-main {
-  padding: 30px 10%;/* margen interno con porcentaje horizontal */
-}
-
-section {
-  margin-bottom: 40px;/* espacio entre secciones */
-}
-
-section h3 {/* títulos de las secciones */
-  font-size: 1.6em;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-section p {/* parrafos dentro de las secciones */
-  font-size: 1.1em;
-  color: #555;
-  line-height: 1.6; /* espaciado entre líneas */
-}
 
 /* ESTILO TARJETAS DEL CATALOGO */
 section ol {/* lista ordenada que contiene tarjetas (li) */
@@ -83,49 +64,15 @@ section ol li:hover {
   /*box-shadow: 0 6px 16px rgba(0,0,0,0.15);*/
 }
 
-section ol li img {/* imagen dentro de la tarjeta */
-  width: 300px;
-  height: auto;
-  object-fit: cover;/* ajusta la imagen sin deformarla */
-  flex-shrink: 0;
-}
-/* contenedor del texto dentro de la tarjeta */
-section ol li div {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-/* titulo del salón */
-section ol li strong {
-  display: block;
-  font-size: 1.2em;
-  color: #2c3e50;
-}
-
-section ol li p {/* descripción del salón */
-  margin-top: 10px;
-  line-height: 1.5;
-  color: #444;
-}
 
 /* Responsive */
-@media (max-width: 768px) {/* adaptación para pantallas pequeñas (celulares) "NO SE SI VA"*/ 
-  section ol li {
+/*@media (max-width: 768px) {/* adaptación para pantallas pequeñas (celulares) "NO SE SI VA"*/ 
+  /*section ol li {
     flex-direction: column;
     align-items: center;
   }
-
-  section ol li img {
-    width: 100%;/*imagen que ocupa todo el ancho*/
-  }
-
-  section ol li div {
-    padding: 15px;
-    text-align: center;
-  }
-}
+}--/
 
 /* FOOTER */
 footer {

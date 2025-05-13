@@ -28,6 +28,11 @@ header {/* Estilo del encabezado */
 @media (max-width: 768px) {
   header h1 {
     font-size: 1rem;
+    margin-right: 10px;
+  }
+  .navbar-toggler{
+    margin-left: 400px;
+    margin-top: -100px;
   }
 }
 
@@ -93,6 +98,24 @@ section ol li:hover {
 
 .tres:hover{
   font-size: 1.4em;
+}
+
+@media (max-width: 768px) {
+  .servicio {
+    font-size: 14px;
+    margin: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+  }
 }
 
 /* MAIN BLOG */

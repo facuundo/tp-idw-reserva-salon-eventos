@@ -1,3 +1,166 @@
+<<<<<<< HEAD
 h1{
     color: red;
 }
+=======
+/* RESET Y BASE */
+/* Quita margenes y paddings predeterminados de todos los elementos, y hace que el ancho incluya el padding y borde. Mejora navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Define fuente y colores base del cuerpo del sitio */
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;/* Fuente moderna y legible */
+  background-color: #fcfcfc;/* Fondo claro */
+  color: #94978d;/* Color de texto suave */
+}
+
+/* HEADER */
+header {/* Estilo del encabezado */
+  background-color: #26459b;
+  color: white;/* Texto en blanco */
+  padding: 5px 0;
+}
+
+.logo{
+  height: 48px;
+  margin-right: 2em;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  .navbar-toggler{
+    margin-left: 400px;
+    margin-top: -100px;
+  }
+}
+
+/* MAIN */
+
+/* ESTILO TARJETAS DEL CATALOGO */
+section ol {/* lista ordenada que contiene tarjetas (li) */
+
+  gap: 20px;
+  padding: 0;
+}
+/* Cada tarjeta del catálogo */
+section ol li {/* MODIFICA LA DESCRIPCION EN LA IMAGEN */
+ /* display: flex;/* imagen y contenido en fila */ 
+ /* flex-wrap: nowrap;
+  align-items: flex-start;/* alinea arriba */
+  gap: 20px;
+  background-color: #f4f7f8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);/* sombra suave */
+  padding: 16px;
+  transition: transform 0.3s ease;/* aimación al hacer hover */
+}
+
+section ol li:hover {
+  transform: translateY(-5px);/* efecto de levantar la tarjeta al pasar el mouse */
+  /*transform: scale(1.01);*/
+  /*box-shadow: 0 6px 16px rgba(0,0,0,0.15);*/
+}
+
+
+
+/* Responsive */
+/*@media (max-width: 768px) {/* adaptación para pantallas pequeñas (celulares) "NO SE SI VA"*/ 
+  /*section ol li {
+    flex-direction: column;
+    align-items: center;
+  }
+}--/
+
+/* FOOTER */
+
+/* MAIN SERVICIOS */
+
+.lista-servicios {
+  text-indent: 20px;
+  margin-top: 10px; 
+}
+.servicio {
+  position: relative;
+  transition-property: font-size, color;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.servicio:hover {
+  transition-property: font-size, color;
+  transition-duration: 1.5s;
+  transition-delay: 0.2s;
+  font-size: 1.6em;
+  color: rgb(2, 10, 58);
+}
+
+.tres:hover{
+  font-size: 1.4em;
+}
+
+@media (max-width: 768px) {
+  .servicio {
+    font-size: 14px;
+    margin: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+/* MAIN BLOG */
+
+
+
+
+/* MAIN CONTACTO */
+.contacto {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+button {
+  background: #008CBA;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* MAIN INSTITUCIONAL */
+>>>>>>> 9844baed70a1683c7c82bf4caa9a7f9f99ac4e82

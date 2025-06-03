@@ -51,13 +51,16 @@
     <main class="container mt-4">
         <section>
           <div class="container">
-            <h3 class="fs-4 text-primary mb-2">Bienvenido a nuestro Catálogo</h3>
-            <p class="fs-5 text-secondary">Arma tu presupuesto</p>
+            <h3 class="fs-4 text-primary mb-2">Nuestro Catálogo</h3>
+            <p class="fs-5 text-secondary">Opciones para armar tu presupuesto</p>
           </div>
         </section>
-    <section class="container my-5"><!--Corregir-->
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-       
+    <section id="catalogo"> <!-- modificado  -->
+      <h2>Catálogo de Salones - Armá tu reserva</h2>
+      <!-- <div id="catalogo-salones" class="row"></div> -->
+    <!-- </section> -->
+    
+    <script type="module" src="js/catalogo.js"></script>
             <!-- Card 1 -->
       <div class="col-md-6 col-lg-4 ">
         <div class="card h-100">
@@ -74,9 +77,9 @@
       <!-- Card 2 -->
       <div class="col-md-6 col-lg-4 ">
         <div class="card h-100">
-          <img src="imagenes/salon_2.jpg" class="card-img-top" alt="Salon Aurora">
+          <img src="imagenes/salon_2.jpg" class="card-img-top" alt="Salon Azul">
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Salón Aurora</h5>
+            <h5 class="card-title">Salón Azul</h5>
             <p class="card-subtitle mb-2 text-muted">Nogoyá 1745</p>
             <p class="card-text">Ambiente al aire libre con vista panorámica. Perfecto para celebraciones íntimas, con zona de parrilla y jardín decorativo.</p>
             <a href="reserva.html?salon=esperanza" class="btn btn-primary mt-auto">Reservar</a>
@@ -135,7 +138,7 @@
           </div>
         </div>
       </div>
-  
+    </section>  
       </div>
     </section>
     </main>

@@ -9,21 +9,21 @@
 </head>
 <body>
     <header class="bg-primary text-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center">
-            <img src="imagenes/logo.png" alt="Logo de Eventitos" style="height: 50px;">
+        <div class="container d-flex justify-content-between align-items-center"> <!-- contenedor flex, padre del div siguiente -->
+          <div class="d-flex align-items-center"> <!-- div que contiene la imagen y el titulo h1 -->
+            <img src="imagenes/logo.png" alt="Logo de Eventitos" style="height: 50px;"> <!-- imagen que tiene ruta, texto alternativo y altura definido en línea -->
             <h1 class="h5 mb-0 ms-3">Eventitos</h1>
           </div>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark"> <!-- etiqueta nav de la barra de navegación estilada con bootstrap -->
         <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"> <!-- boton que se muestra hasta los 1000px -->
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- lista desordenada que contiene todos los links de cada elemento li -->
               <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -35,24 +35,24 @@
         </div>
     </nav>
 
-    <main class="container mt-4">
+    <main class="container mt-4"> <!-- main de la pagina index -->
         <section>
-          <div class="container">
+          <div class="container"> <!-- div que contiene al h3 y al elemento p -->
             <h3 class="fs-4 text-primary mb-2">Bienvenido a nuestro Catálogo</h3>
             <p class="fs-5 text-secondary">Armá tu presupuesto</p>
           </div>
         </section>
 
-        <section class="container my-5">
+        <section class="container my-5"> <!-- seccion que contiene o contendrá los salones disponibles en el catálogo -->
            <h3 class="fs-4 text-primary mb-3">Salones disponibles</h3>
            <div id="contenedorCatalogo" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"></div>
         </section>
     </main>
 
-    <footer class="bg-primary text-white py-4 mt-5">
-      <div class="container">
+    <footer class="bg-primary text-white py-4 mt-5"> <!-- comienza footer con su etiqueta semántica y estilado con bootstrap -->
+      <div class="container"> <!-- contenedor de todo el contenido del footer -->
         <div class="row">
-          <div class="col-md-6 mb-4">
+          <div class="col-md-6 mb-4"> <!-- columnas responsivas del elemento h4 y el formulario del footer -->
             <h4>Suscribite a nuestro blog</h4>
             <form class="d-flex flex-column flex-sm-row gap-2">
               <input type="email" class="form-control" name="email" placeholder="Tu email..." required>
@@ -62,7 +62,7 @@
           <div class="col-md-6 mb-4">
             <h4>Nuestras redes sociales</h4>
             <ul class="list-unstyled">
-              <li><a href="https://facebook.com" class="text-white" target="_blank">Facebook</a></li>
+              <li><a href="https://facebook.com" class="text-white" target="_blank">Facebook</a></li> <!-- elemento li y elemento a que abre un link en otra pestaña -->
               <li><a href="https://instagram.com" class="text-white" target="_blank">Instagram</a></li>
               <li><a href="https://twitter.com" class="text-white" target="_blank">Twitter</a></li>
             </ul>
@@ -75,8 +75,8 @@
           <a href="#arriba" class="text-white text-decoration-underline">Volver arriba</a>
         </div>
       </div>
-    </footer>
-    <script type="module" src="js/catalogo.js"></script>
+    </footer> <!-- etiqueta de cierre del footer -->
+    <script type="module" src="js/catalogo.js"></script> <!-- conexion con javascript (en catalogo.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/catalogo.js"></script>
 </body>

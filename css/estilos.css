@@ -26,11 +26,11 @@ header {/* Estilo del encabezado */
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* define el tamaño de la letra del h1 del header con una medida relativa */
   margin-right: 1em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* diseño responsivo que se aplica cuando el ancho de la pantalla llega hasta 768px */
   header h1 {
     font-size: 1rem;
     margin-right: 10px;
@@ -178,6 +178,3 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-
-
-/* MAIN INSTITUCIONAL */

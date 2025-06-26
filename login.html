@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body class="container py-5">
-    <h2 class="mb-4">Iniciar sesión</h2>
+  <h2 class="mb-4">Iniciar sesión</h2>
 
-    <form id="loginForm">
-        <div class="mb-3">
-            <label for="usuario" class="form-label">Usuario</label>
-            <input type="text" class="form-control" id="usuario" required />
-        </div>
+  <form id="loginForm">
+    <div class="mb-3">
+      <label for="usuario" class="form-label">Usuario</label>
+      <input type="text" class="form-control" id="usuario" required />
+    </div>
 
-        <div class="mb-3">
-            <label for="contrasena" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="contrasena" required />
-        </div>
+    <div class="mb-3">
+      <label for="contrasena" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="contrasena" required />
+    </div>
 
-        <button type="submit" class="btn btn-primary">Ingresar</button>
-    </form>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+  </form>
 
-    <script>
-      if (sessionStorage.getItem('usuario')) {
-        alert('Ya habias iniciado sesion. Redirigiendo al formulario...');
-        window.location.href = 'altaSalon.html';
+  <script>
+
+    if (sessionStorage.getItem('token')) {
+      alert('Ya habías iniciado sesión. Redirigiendo...');
+      window.location.href = 'altaSalon.html';
     }
 
-    document.getElementById('loginForm').addEventListener('submit', async function(event) {
-  event.preventDefault();
+    document.getElementById('loginForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
 
-  const usuario = document.getElementById('usuario').value;
-  const pass = document.getElementById('contrasena').value;
+      const usuario = document.getElementById('usuario').value.trim();
+      const pass = document.getElementById('contrasena').value;
 
-  try {
-    const response = await fetch('https://dummyjson.com/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        username: usuario,
-        password: pass
-      })
+      try {
+        const response = await fetch('https://dummyjson.com/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            username: usuario,
+            password: pass
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.token) {
+          sessionStorage.setItem('token', data.token);
+          sessionStorage.setItem('usuario', data.username);
+
+          alert('Inicio de sesión exitoso');
+          window.location.href = 'altaSalon.html'; 
+        } else {
+          alert('Error: ' + (data.message || 'Credenciales incorrectas'));
+        }
+      } catch (error) {
+        console.error('Error de conexión:', error);
+        alert('No se pudo establecer conexión con el servidor');
+      }
     });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      sessionStorage.setItem('usuario', data.username);
-      sessionStorage.setItem('token', data.token);
-      alert('Inicio de sesión exitoso');
-      window.location.href = '../altaSalon.html';
-    } else {
-      alert('Error: ' + data.message);
-    }
-  } catch (error) {
-    alert('Hubo un problema con la conexión');
-    console.error(error);
-  }
-});
-
-</script>
-<script src="js/login.js"></script>
+  </script>
 </body>
 </html>

@@ -1,10 +1,10 @@
-// Verificamos si ya hay sesión activa
+
 if (sessionStorage.getItem('usuario')) {
   alert('Ya habías iniciado sesión. Redirigiendo al formulario...');
   window.location.href = 'altaSalon.html';
 }
 
-// Escuchamos el envío del formulario
+
 document.getElementById('loginForm').addEventListener('submit', async function(event) {
   event.preventDefault();
 
@@ -16,9 +16,9 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            username: usuario,
-            password: contrasena
-  })
+          username: usuario,
+          password: contrasena
+})
 });
 
     const data = await response.json();
